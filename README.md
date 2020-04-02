@@ -14,8 +14,7 @@ fisher add archmagees/swift-fish-completion
 
 # Usage
 
-<video src="/Users/archmagees/Repositories/Personal/fishshell/fisher/swift-fish-completion/swift-fish-completion.mp4"></video>
-
+<video src="https://github.com/archmagees/swift-fish-completion/swift-fish-completion.mp4"></video>
 ## Author
 
 archmagees.dev@gmail.com
