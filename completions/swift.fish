@@ -210,7 +210,7 @@ function __swift_package_editable_option
 	# swift package edit or unedit `Package` --options
 	set inputs (commandline -opc)
 	if __swift_commands_conforms $argv[1..-2] $inputs[-1] $argv[-1]
-		if contains $inputs[-1] (_swift_package_dependencies)
+		if contains $inputs[-1] (__swift_package_dependencies)
 			return 0
 		end
 	end
@@ -341,7 +341,7 @@ complete -c swift -n '__swift_options_conforms swift package describe --type' -f
 ############################################################
 
 
-complete -c swift -n '__swift_commands_conforms swift package edit' -r -a '(_swift_package_dependencies)' -r
+complete -c swift -n '__swift_commands_conforms swift package edit' -r -a '(__swift_package_dependencies)' -r
 complete -c swift -n '__swift_package_editable_option swift package edit --branch' -f -l branch -d 'The branch to create' -r
 complete -c swift -n '__swift_package_editable_option swift package edit --path' -f -l path -d 'Create or use the checkout at this path' -r
 complete -c swift -n '__swift_package_editable_option swift package edit --revision' -f -l revision -d 'The revision to edit' -r
@@ -389,7 +389,7 @@ complete -c swift -n '__swift_commands_conforms swift package tools-version --se
 ############################################################
 ### swift package unedit
 ############################################################
-complete -c swift -n '__swift_commands_conforms swift package unedit' -r -a '(_swift_package_dependencies)' -r
+complete -c swift -n '__swift_commands_conforms swift package unedit' -r -a '(__swift_package_dependencies)' -r
 complete -c swift -n '__swift_package_editable_option swift package unedit --force' -f -l force -d 'Unedit the package even if it has uncommited and unpushed changes.' -r
 
 
@@ -408,7 +408,7 @@ complete -c swift -n '__swift_commands_conforms swift build --product' -f -l pro
 # complete -c swift -n '__swift_options_conforms swift build --product' -a '(__swift_products)'
 complete -c swift -n '__swift_commands_conforms swift build --show-bin-path' -f -l show-bin-path -d 'Print the binary output path' -r
 complete -c swift -n '__swift_commands_conforms swift build --target' -f -l target -d 'Build the specified target' -r
-complete -c swift -n '__swift_options_conforms swift build --target' -f -a '(_swift_targets)'
+complete -c swift -n '__swift_options_conforms swift build --target' -f -a '(__swift_targets)'
 
 
 
