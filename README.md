@@ -7,7 +7,7 @@
 With [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 
 ```fish
-fisher add archmagees/swift-fish-completion
+fisher install archmagees/swift-fish-completion
 ```
 
 
